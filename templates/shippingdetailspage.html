@@ -1,0 +1,11 @@
+{% extends 'base.html'  %}
+
+{% block content %}
+
+{% for item in object_list %}
+
+    {{ item.receiver_first_name }} - {{ item.receiver_last_name }} - {{ item.receiver_address }}
+
+{% endfor %}
+
+{% endblock content %}

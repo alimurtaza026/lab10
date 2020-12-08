@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{#{% load crispy_forms_tags %}#}
+pip
+{% block content %}
+    <div class="row">
+    <form method="POST">
+                  {% csrf_token %}
+   <div class="form-group">
+    <label for="first_name">Receiver First Name</label>
+    <input type="text" class="form-control" id="first_name" name="receiver_first_name" placeholder="Receiver First Name">
+  </div>
+   <div class="form-group">
+    <label for="last_name">Receiver Last Name</label>
+    <input type="text" class="form-control" id="last_name" name="receiver_last_name" placeholder="Last Name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" class="form-control" id="email" name="receiver_address" aria-describedby="emailHelp" placeholder="Enter address">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your address with anyone.</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+{% endblock %}

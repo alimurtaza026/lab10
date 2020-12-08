@@ -1,0 +1,11 @@
+{% extends 'base.html'  %}
+
+{% block content %}
+
+{% for item in object_list %}
+
+    {{ item.first_name }} - {{ item.last_name }} - {{ item.email }}
+
+{% endfor %}
+
+{% endblock content %}
